@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Using * and : symbol we can use variable globally*/
+:root {
+    /*variable*/
+    --primary-color: #ffd129;
+    --primary-dark: #ebb800;
+    --secondary-color: #ffd086;
+    --accent-color: #96feff;
+    /*highlighting color*/
+    --text-dark: #1a1a1a;
+    --text-light: #4c4d4f;
+    --background: #fbfaf5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background);
+
+}
+
+
+
+.flash-sale {
+    background-color: var(--accent-color);
+    text-align: center;
+}
+/* to prevent content from overflow*/
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-inline: 1rem;
+}
+
+header {
+    padding: 0.5rem;
+    box-shadow: 0px 2px 5px #00000022;
+    position: sticky;
+    /*header will always be seen in the top position even if i scroll the page*/
+    top: 0;
+    z-index: 99;
+    background-color: white;
+
+}
+
+.header-items {
+
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* for mobile view*/
+nav {
+    display: none;
+}
+
+nav a {
+    text-decoration: none;
+    /* remove underline*/
+    color: var(--text-dark);
+    padding: 0.25rem 0.5rem;
+}
+
+/*While hovering the nav bar case it color to primaty color*/
+nav a:hover {
+    color: var(--primary-color);
+}
+
+.cart {
+    width: auto;
+    height: auto;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #efefef;
+
+}
+
+.cart span {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 0.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 0.5rem 1rem;
+}
+
+section {
+    padding-block: 3rem;
+}
+
+/*Hero section*/
+
+#hero {
+    background-color: white;
+}
+
+.herobox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.herobox img {
+    max-width: 100%;
+    /* width unit is percentage because it adapt different screen sizes.*/
+    width: auto;
+    height: 100%;
+    border-radius: 0.6rem;
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, 0.276);
+
+}
+
+
+.herocontent p {
+    color: var(--text-light);
+    padding-block: 1rem;
+    font-size: 18px;
+}
+
+.herocontent .shop {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    /*top to bottom & left to right*/
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* smoothly animate changes to an element's style.*/
+}
+
+.herocontent .shop:hover {
+    opacity: 0.9;
+}
+
+.herocontent .explore {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 1.25rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* smoothly animate changes to an element's style.*/
+    margin-inline: 0.5rem;
+}
+
+.herocontent .explore:hover {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 1.25rem;
+    color: white;
+}
+
+/*benefits section*/
+
+#benefits h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.benefitsbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.benefitsbox .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.benefitsbox .card p {
+    color: var(--text-light);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.benefitsbox .card span {
+    font-size: 2rem;
+}
+
+/*call to action section style*/
+
+.cta {
+    background: linear-gradient(to right,
+            var(--primary-color),
+            var(--primary-dark));
+    padding: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+}
+
+.cta p {
+    text-align: center;
+}
+
+.cta button {
+    background-color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.cta button:hover {
+    color: var(--primary-color);
+
+}
+
+#signupForm {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.signup-form {
+    
+    background-color: var(--background);
+    height: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 45%;
+    left: 0;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    margin:1rem;
+}
+
+.signup-form form {
+    margin-top: 1rem;
+}
+
+.signup-form form input {
+    width: 100%;
+    border: 1px solid rgba(237, 215, 120, 0.4);
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
+}
+
+.signup-form form button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 1rem;
+}
+
+.signup-form .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--background);
+}
+
+/*Feature section style*/
+#features h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.featurebox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.featurebox .card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 2px 2px 16px rgb(0, 0, 0, 0.1);
+
+}
+
+.featurebox .card img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+    /*The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.*/
+}
+
+.featurebox .card .content {
+    background-color: white;
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+.featurebox .card .content p {
+    margin-block: 0.25rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.featurebox .card .content button {
+    background-color: var(--background);
+    padding: 0.25rem 1rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.featurebox .card .content button:hover {
+    color: var(--primary-color);
+
+}
+.featurebox .card:hover{
+    transform: translateY(-20px);
+    transition: all ease 0.3s;
+}
+
+/*Best Seller section style*/
+#bestseller {
+    background-color: white;
+}
+
+.bestsellerbox {
+    background-color: rgba(225, 212, 165, 0.311);
+    padding: 2rem;
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.bestsellerbox img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    /*The CSS object-fit property is used to specify how an <img> or <video> should be resized to fit its container.*/
+
+}
+
+.bestsellerbox .content p {
+    padding-block: 0.5rem;
+    color: var(--text-light);
+}
+
+.bestsellerbox .content h3 {
+    color: var(--primary-color);
+    gap: 2rem;
+}
+
+.bestsellerbox .content button {
+    background-color: var(--primary-color);
+    padding: 0.5rem 2rem;
+    /*top to bottom & left to right*/
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+
+}
+
+.bestsellerbox .content button:hover {
+    opacity: 0.9;
+}
+
+/* contact section style*/
+
+.contactbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contactbox .info p {
+    color: var(--text-light);
+    font-size: 0.75rem;
+    margin-block: 1rem;
+}
+
+.contactbox .info a {
+    font-weight: normal;
+    margin: 0.4rem;
+    font-size: 0.9rem;
+    display: flex;
+    text-decoration: none;
+    color: var(--text-dark);
+
+}
+
+.contactbox .info a:hover {
+    color: var(--primary-color);
+}
+
+.contactbox form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+}
+
+.contactbox form input,
+.contactbox form textarea {
+    width: 100%;
+    border: 1px solid rgba(237, 215, 120, 0.4);
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+
+}
+
+.contactbox form button {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    /*top to bottom & left to right*/
+    border: none;
+    border-radius: 1.25rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* smoothly animate changes to an element's style.*/
+    max-width: fit-content;
+    margin-top: 0.5rem;
+}
+
+
+.contactbox form button:hover {
+    opacity: 0.9;
+}
+
+.contactbox form input:focus,
+.contactbox form textarea:focus {
+    outline: 2px solid var(--primary-color);
+
+}
+
+
+@media (min-width:512px) {
+    .benefitsbox {
+        grid-template-columns: 1fr 1fr;
+        /*defines a CSS grid with two, equal-width columns that split the available space 50/50. */
+    }
+
+    .featurebox {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .bestsellerbox {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .signup-form{
+        left:25%;
+        width:50%;
+    }
+}
+
+/* for pc or tablet view*/
+@media (min-width:768px) {
+    nav {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .herobox img {
+        width: 90%
+    }
+
+    .herobox {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+    }
+
+    .benefitsbox {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .featurebox {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .bestsellerbox {
+        padding-inline: 3rem;
+        gap: 2rem;
+    }
+
+    .contactbox {
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    .contactbox form input,
+    .contactbox form textarea {
+        width: 70%;
+        border: 1px solid rgba(237, 215, 120, 0.4);
+        background-color: white;
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+
+    }
+
+}
+
+@media (min-width:1200px) {
+
+    .herocontent h1 {
+        font-size: 3rem;
+    }
+
+    .featurebox {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .signup-form{
+        left:35%;
+        width:30%;
+    }
+}
+
+[popover]{
+    position-area: bottom;
+    margin:initial;
+}
+
+.cart-items{
+    border:none;
+    background-color:var(--background);
+    box-shadow:2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius:1rem;
+    padding:1rem;
+    margin-top:0.5rem;
+}
+
+.cart-items ul{
+    list-style-type:none;
+}
+
+
