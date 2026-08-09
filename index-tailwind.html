@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Decor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend:{
+
+                colors: {
+
+                    "primary": "#ffd129",
+                    "primary-dark": "#ebb800",
+                    "secondary": "#ffd086",
+                    "accent": "#c2ff29",
+                    "dark": "#1a1a1a",
+                    "light": "#4c4d4f",
+                    "background": "#fbfaf5"
+                },
+            }
+
+            }
+        }
+    </script>
+    <style>
+        [popover]{
+    position-area: bottom;
+    margin:initial;
+}
+    </style>
+</head>
+
+<body>
+    <div class="text-center bg-accent px-2 py-1">Flash sale upto 10% off</div>
+ <header class="py-2 shadow-lg sticky top-0 bg-white z-9">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between gap-8">
+                    <img src="image/logo1.jpg" alt="Home Decor" height="50" class="h-16">
+    
+                <nav class="hidden md:block">
+                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#hero">Home</a>
+                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#features">Shop</a>
+                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#bestseller">Feature</a>
+                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#contact">Contact</a>
+                </nav>
+
+                <button class="px-4 pt-1 pb-2 bg-[#efefef] rounded-2xl h-auto" popovertarget="cart">🛒
+                    
+  <span class="bg-primary text-white px-2 py-0.5 rounded-xl text-xs">5</span>
+                </button>
+      
+                <div class="bg-background shadow rounded-xl mt-2 p-4 " id="cart" popover="auto" class="cart-items">
+                    <ul>
+                        <li>Round Mirror</li>
+                        <li>Rug</li>
+                        <li>Floating Shelf</li>
+                        <li>Ceramic Vase</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

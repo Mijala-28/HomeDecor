@@ -11,7 +11,7 @@
     --primary-color: #ffd129;
     --primary-dark: #ebb800;
     --secondary-color: #ffd086;
-    --accent-color: #96feff;
+    --accent-color: #c2ff29;
     /*highlighting color*/
     --text-dark: #1a1a1a;
     --text-light: #4c4d4f;
@@ -32,6 +32,7 @@ body {
 .flash-sale {
     background-color: var(--accent-color);
     text-align: center;
+    padding:  0.25em 0.5rem;
 }
 /* to prevent content from overflow*/
 .container {
