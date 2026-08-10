@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,50 +8,50 @@
     <script>
         tailwind.config = {
             theme: {
-                extend:{
+                extend: {
 
-                colors: {
-
-                    "primary": "#ffd129",
-                    "primary-dark": "#ebb800",
-                    "secondary": "#ffd086",
-                    "accent": "#c2ff29",
-                    "dark": "#1a1a1a",
-                    "light": "#4c4d4f",
-                    "background": "#fbfaf5"
-                },
-            }
+                    colors: {
+                        "primary": "#ffd129",
+                        "primary-dark": "#ebb800",
+                        "secondary": "#ffd086",
+                        "accent": "#c2ff29",
+                        "dark": "#1a1a1a",
+                        "light": "#4c4d4f",
+                        "background": "#fbfaf5"
+                    },
+                }
 
             }
         }
     </script>
     <style>
-        [popover]{
-    position-area: bottom;
-    margin:initial;
-}
+        [popover] {
+            position-area: bottom;
+            margin: initial;
+        }
+        
     </style>
 </head>
 
-<body>
+<body class="bg-background">
     <div class="text-center bg-accent px-2 py-1">Flash sale upto 10% off</div>
- <header class="py-2 shadow-lg sticky top-0 bg-white z-9">
+    <header class="py-2 shadow-lg sticky top-0 bg-white z-9">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between gap-8">
-                    <img src="image/logo1.jpg" alt="Home Decor" height="50" class="h-16">
-    
+                <img src="image/logo1.jpg" alt="Home Decor" height="50" class="h-16">
+
                 <nav class="hidden md:block">
-                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#hero">Home</a>
-                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#features">Shop</a>
-                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#bestseller">Feature</a>
-                    <a class ="text-dark px-2 py-1 hover:text-primary"href="#contact">Contact</a>
+                    <a class="text-dark px-2 py-1 hover:text-primary" href="#hero">Home</a>
+                    <a class="text-dark px-2 py-1 hover:text-primary" href="#features">Shop</a>
+                    <a class="text-dark px-2 py-1 hover:text-primary" href="#bestseller">Feature</a>
+                    <a class="text-dark px-2 py-1 hover:text-primary" href="#contact">Contact</a>
                 </nav>
 
                 <button class="px-4 pt-1 pb-2 bg-[#efefef] rounded-2xl h-auto" popovertarget="cart">🛒
-                    
-  <span class="bg-primary text-white px-2 py-0.5 rounded-xl text-xs">5</span>
+
+                    <span class="bg-primary text-white px-2 py-0.5 rounded-xl text-xs">5</span>
                 </button>
-      
+
                 <div class="bg-background shadow rounded-xl mt-2 p-4 " id="cart" popover="auto" class="cart-items">
                     <ul>
                         <li>Round Mirror</li>
@@ -65,6 +64,61 @@
             </div>
         </div>
     </header>
+    <main>
+        <section id="hero" class=" bg-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:items-center lg:gap-16">
+                    <img src="image/hero.jpg" alt="Hero Image" class="max-w-full w-auto h-full rounded-xl shadow-md">
+                    <div>
+                        
+                        <h1 class="text-3xl font-bold md:text-4xl lg:text-5xl"> Choose Aesthetic Decor For Your Happy Home </h1>
+                        <p class="text-light text-lg py-4">
+                            From the living room to the bedroom, explore a handpicked collection of decor pieces that
+                            bring warmth, personality, and elegance into every corner of your home because the spaces
+                            you live in should reflect the life you love.</p>
+                        <button class="bg-primary px-4 py-2 rounded-3xl text-white  transition ease duration 300 hover:opacity-75">Shop Now 🡒</button>
+                        <button class="bg-white py-2 px-4 border-2 border-primary rounded-3xl text-primary transition ease duration 300 mx-2 hover:bg-primary hover:text-white">Explore</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+         <section id="benefits" class="py-12">
+            <div class="container mx-auto px-4">    
+                <h2 class="text-center mb-8 font-bold ">Why Choose Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col items-center gap-2 ">
+                        <span>🚚</span>
+                        <h4 class="font-bold">Free Shipping Inside The Valley</h4>
+                        <p class="text-light text-center text-md">On all orders over Rs.10,000 & fatser delivery.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span>🔁</span>
+                        <h4 class="font-bold">10-Days Return</h4>
+                        <p class="text-light text-center text-md">Hassle free exchange & returns.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span>🎧</span>
+                        <h4 class="font-bold">24/7 Support</h4>
+                        <p class="text-light text-center text-md">Always available for your assistance.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <span>💳</span>
+                        <h4 class="font-bold">Secure Payment</h4>
+                        <p class="text-light text-center text-md" >Safe payment gateway online and card.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-primary text-white text-center px-1 py-1">
+        &copy; 2026. All rights reserved.
+    </footer>
+
+
 </body>
 
 </html>
