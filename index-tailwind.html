@@ -86,31 +86,56 @@
         </section>
          <section id="benefits" class="py-12">
             <div class="container mx-auto px-4">    
-                <h2 class="text-center mb-8 font-bold ">Why Choose Us</h2>
+                <h2 class="text-center mb-8 font-bold text-2xl">Why Choose Us</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                     <div class="flex flex-col items-center gap-2 ">
-                        <span>🚚</span>
+                        <span class="text-4xl">🚚</span>
                         <h4 class="font-bold">Free Shipping Inside The Valley</h4>
                         <p class="text-light text-center text-md">On all orders over Rs.10,000 & fatser delivery.</p>
                     </div>
-                    <div class="benefit-card">
-                        <span>🔁</span>
+                    <div class="flex flex-col items-center gap-2">
+                        <span class="text-4xl">🔁</span>
                         <h4 class="font-bold">10-Days Return</h4>
                         <p class="text-light text-center text-md">Hassle free exchange & returns.</p>
                     </div>
-                    <div class="benefit-card">
-                        <span>🎧</span>
+                    <div class="flex flex-col items-center gap-2">
+                        <span class="text-4xl">🎧</span>
                         <h4 class="font-bold">24/7 Support</h4>
                         <p class="text-light text-center text-md">Always available for your assistance.</p>
                     </div>
-                    <div class="benefit-card">
-                        <span>💳</span>
+                    <div class="flex flex-col items-center gap-2">
+                        <span class="text-4xl">💳</span>
                         <h4 class="font-bold">Secure Payment</h4>
                         <p class="text-light text-center text-md" >Safe payment gateway online and card.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="call-to-action">
+            <div class="container mx-auto px-4">
+                <div class="bg-gradient-to-r from-primary to-primary-dark rounded-3xl flex flex-col text-center text-white gap-4 py-4 px-4">
+                    <h2 class="font-bold text-2xl">Join Home Decor</h2>
+                    <p class="text-center">
+                        Your journey to a more beautiful home starts with a single step join thousands of happy
+                        homeowners who are already creating the spaces of their dreams with our handpicked collections.
+                    </p>
+                    <button onclick="signupForm.showModal()" class="bg-white text-black w-64 py-2 px-4 rounded-3xl hover:text-primary self-center ">Signup to Get 10% Off....</button>
+                    <dialog id="signupForm"> <!--The <dialog> element makes it easy to create popup dialogs and modals on a web page.-->
+                    <div class="bg-background max-h-full w-lg flex flex-col justify-center fixed items-center top-[45%] py-8 px-12 rounded-3xl margin-4">
+                        <button class="absolute top-0 right-3" onclick="signupForm.close()">x</button>
+                        <h2>Subscribe Us</h2>
+                        <form action="#" class="mt-4">
+                            <input type="email" name="Email" required placeholder="email address" class="w-full border-2 border-blue bg-white rounded-3xl py-2 px-4">
+                            <button class="w-full bg-primary text-white mt-4 py-2 px-4 rounded-3xl">Subscribe</button> 
+                        </form>
+
+                    </div>
+                    </dialog>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
 
