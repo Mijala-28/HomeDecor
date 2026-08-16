@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
 
@@ -35,39 +37,42 @@
     </style>
 </head>
 
-<body class="bg-background">
-    <div class="text-center bg-accent px-2 py-1">Flash sale upto 10% off</div>
-    <header class="py-2 shadow-lg sticky top-0 bg-white z-9">
+<body class="bg-background dark:bg-gray-900 dark:text-white">
+    <div class="text-center dark:text-yellow-900 bg-accent px-2 py-1">Flash sale upto 10% off</div>
+    <header class="py-2 shadow-lg sticky top-0 bg-white z-9 dark:bg-gray-800 dark:text-white z-9">
         <div class="container mx-auto px-4">
             <div class="flex items-center justify-between gap-8">
                 <img src="image/logo1.jpg" alt="Home Decor" height="50" class="h-16">
 
                 <nav class="hidden md:block">
-                    <a class="text-dark px-2 py-1 hover:text-primary" href="#hero">Home</a>
-                    <a class="text-dark px-2 py-1 hover:text-primary" href="#features">Shop</a>
-                    <a class="text-dark px-2 py-1 hover:text-primary" href="#bestseller">Feature</a>
-                    <a class="text-dark px-2 py-1 hover:text-primary" href="#contact">Contact</a>
+                    <a class="text-dark dark:text-white dark:hover:text-primary px-2 py-1 hover:text-primary" href="#hero">Home</a>
+                    <a class="text-dark dark:text-white dark:hover:text-primary px-2 py-1 hover:text-primary" href="#features">Shop</a>
+                    <a class="text-dark dark:text-white dark:hover:text-primary px-2 py-1 hover:text-primary" href="#bestseller">Feature</a>
+                    <a class="text-dark dark:text-white dark:hover:text-primary px-2 py-1 hover:text-primary" href="#contact">Contact</a>
                 </nav>
 
-                <button class="px-4 pt-1 pb-2 bg-[#efefef] rounded-2xl h-auto" popovertarget="cart">🛒
+                <div class="flex items-center gap-4">
+                    <button class="px-4 pt-1 pb-2 bg-[#efefef] rounded-2xl h-auto gap-8" popovertarget="cart">🛒
 
-                    <span class="bg-primary text-white px-2 py-0.5 rounded-xl text-xs">5</span>
-                </button>
+                        <span class="bg-primary text-white px-2 py-0.5 rounded-xl text-xs">5</span>
+                    </button>
 
-                <div class="bg-background shadow rounded-xl mt-2 p-4 " id="cart" popover="auto" class="cart-items">
-                    <ul>
-                        <li>Round Mirror</li>
-                        <li>Rug</li>
-                        <li>Floating Shelf</li>
-                        <li>Ceramic Vase</li>
-                    </ul>
+                    <div class="bg-background shadow rounded-xl mt-2 p-4 " id="cart" popover="auto" class="cart-items">
+                        <ul>
+                            <li>Round Mirror</li>
+                            <li>Rug</li>
+                            <li>Floating Shelf</li>
+                            <li>Ceramic Vase</li>
+                        </ul>
+                    </div>
+                    <button onclick="toggleDarkMode()" class="px-4 py-2 bg-gray-100 dark:bg-gray-700 rounded-3xl"
+                        id="themeButton">🌙</button>
                 </div>
-
             </div>
         </div>
     </header>
     <main>
-        <section id="hero" class=" bg-white py-12">
+        <section id="hero" class=" bg-white py-12 dark:bg-gray-900">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:items-center lg:gap-16">
                     <img src="image/hero.jpg" alt="Hero Image" class="max-w-full w-auto h-full rounded-xl shadow-md">
@@ -75,7 +80,7 @@
 
                         <h1 class="text-3xl font-bold md:text-4xl lg:text-5xl"> Choose Aesthetic Decor For Your Happy
                             Home </h1>
-                        <p class="text-light text-lg py-4">
+                        <p class="text-light dark:text-gray-300 text-lg py-4">
                             From the living room to the bedroom, explore a handpicked collection of decor pieces that
                             bring warmth, personality, and elegance into every corner of your home because the spaces
                             you live in should reflect the life you love.</p>
@@ -153,81 +158,81 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/vase.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Ceramic Vase</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.2500</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/dinning.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Dinning Table</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.10,000</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/mirror.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Round Mirror</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.3500</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/lamp.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Lamp</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.3000</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/shelf.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Floating Shelf</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.2500</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/sofa.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">White Sofa</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.20,000</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/rug.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Rug</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.2000</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
                     <div class="product-card">
                         <img class="w-full h-52 object-cover" src="image/wall.jpg" alt="featured">
-                        <div class="bg-white p-4">
+                        <div class="bg-white dark:bg-gray-800 p-4">
                             <h2 class="font-bold text-xl">Wall Decor</h4>
                                 <p class="my-1 font-bold text-xl text-primary">Rs.2000</p>
                                 <button
-                                    class="bg-background px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
+                                    class="bg-background dark:bg-gray-700 px-4 py-2 w-full text-center rounded-3xl mt-2 text-3 font-semibold transition ease duration 300 hover:text-primary">Add
                                     to Cart</button>
                         </div>
                     </div>
@@ -235,64 +240,84 @@
             </div>
 
         </section>
-        <section id="bestseller" class="py-12 bg-white ">
+        <section id="bestseller" class="py-12 bg-white dark:bg-gray-900">
             <div class="container mx-auto px-4">
                 <div class="bg-primary/10 px-12 py-8 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                    <img class="max-w-full h-full rounded-3xl object-cover"src="image/limited.jpg" alt="Bestseller">
+                    <img class="max-w-full h-full rounded-3xl object-cover" src="image/limited.jpg" alt="Bestseller">
                     <div class="content">
                         <h2 class="font-bold text-2xl mt-8">Limited Edition Vase</h2>
-                        <p class="text-light py-2 text-lg">One of our limited edition vase that will make your home aesthetic as well as expensive.</p>
+                        <p class="text-light dark:text-gray-300 py-2 text-lg">One of our limited edition vase that will make your home
+                            aesthetic as well as expensive.</p>
                         <h3 class="text-primary gap-8 font-bold text-xl">Rs.10,000</h3>
-                        <button class="bg-primary px-8 py-2 rounded-3xl text-white mt-4 transition duration-300 ease">Add to Cart</button>
+                        <button
+                            class="bg-primary px-8 py-2 rounded-3xl text-white mt-4 transition duration-300 ease">Add to
+                            Cart</button>
                     </div>
                 </div>
 
             </div>
         </section>
-         <section id="contact">
+        <section id="contact">
             <div class="container mt-auto px-4">
-               
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 m-12">
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 my-12 ml-12 mr-0">
                     <form action="#" class="flex flex-col  gap-2 max-w-full">
-                        <input class="w-56 border-2 border-primary/20 bg-white rounded-3xl px-4 py-2 focus:outline-2 focus:outline-primary" type="text" name="Name" id="name" required placeholder="Your name" />
-                        <input class="w-56 border-2 border-primary/20 bg-white rounded-3xl px-4 py-2 focus:outline-2 focus:outline-primary" type="email" name="Email" id="email" required placeholder="Email address" />
-                        <input class="w-56 border-2 border-primary/20 bg-white rounded-3xl px-4 py-2 focus:outline-2 focus:outline-primary" type="tel" name="Phone" id="phone" required placeholder="Your phone no" />
-                        <textarea class="w-56 border-2 border-primary/20 bg-white rounded-3xl px-4 py-2 focus:outline-2 focus:outline-primary""type="message" name="Message" id="message" placeholder="Your message" row="5"></textarea>
-                        <button class="bg-primary px-4 py-2 rounded-3xl text-white mt-2 max-w-fit transition duration-300 ease">Send Message</button>
+                        <input
+                            class="w-56 border-2 border-primary/20 bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 rounded-3xl px-4 py-2 focus:outline-none focus:outline-2 focus:outline-primary"
+                            type="text" name="Name" id="name" required placeholder="Your name" />
+                        <input
+                            class="w-56 border-2 border-primary/20 bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 rounded-3xl px-4 py-2 focus:outline-none focus:outline-2 focus:outline-primary"
+                            type="email" name="Email" id="email" required placeholder="Email address" />
+                        <input
+                            class="w-56 border-2 border-primary/20 bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 rounded-3xl px-4 py-2 focus:outline-none focus:outline-2 focus:outline-primary"
+                            type="tel" name="Phone" id="phone" required placeholder="Your phone no" />
+                        <textarea
+                            class="w-56 border-2 border-primary/20 bg-white dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 rounded-3xl px-4 py-2 focus:outline-none focus:outline-2 focus:outline-primary""type="
+                            message" name="Message" id="message" placeholder="Your message" row="5"></textarea>
+                        <button
+                            class="bg-primary px-4 py-2 rounded-3xl text-white  mt-2 max-w-fit transition duration-300 ease">Send
+                            Message</button>
                     </form>
                     <div class="info">
                         <h2 class="font-bold text-xl">Let's Connect</h2>
-                        <p class="text-light text-lg my-2">Have any queries? Please reach out to us.</p>
-                        <a class="font-normal m-1.6 text-lg flex text-dark" href="https://maps.app.goo.gl/1KUc5whe7Qzrt3Ci6"
+                        <p class="text-light dark:text-gray-300 text-lg my-2">Have any queries? Please reach out to us.</p>
+                        <a class="font-normal m-1.6 text-lg flex text-dark dark:text-white"
+                            href="https://maps.app.goo.gl/1KUc5whe7Qzrt3Ci6"
                             target="_blank"><!-- using target keyword blank we can open the map in new tab-->
                             📍 Jhamsikhel,Lalitpur</a>
-                        <a class="font-normal m-1.6 text-lg flex text-dark" href="mailto:mijalamaharjan14@gmail.com">📨 homedecor@gmail.com</a>
-                        <a class="font-normal m-1.6 text-lg flex text-dark" href="tel:9863483100">📞 +977 9801234556</a>
-                        <a class="font-normal m-1.6 text-lg flex text-dark" href="https://wa.me/">💬 9801234556</a>
+                        <a class="font-normal m-1.6 text-lg flex text-dark dark:text-white" href="mailto:mijalamaharjan14@gmail.com">📨
+                            homedecor@gmail.com</a>
+                        <a class="font-normal m-1.6 text-lg flex text-dark dark:text-white" href="tel:9863483100">📞 +977 9801234556</a>
+                        <a class="font-normal m-1.6 text-lg flex text-dark dark:text-white" href="https://wa.me/">💬 9801234556</a>
                     </div>
-                       <!--iframe element is use to copy other website content and paste that content similar in our website-->
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14134.912716724173!2d85.29603270306784!3d27.66388042090047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18292ce7d869%3A0x9c27140bd9c31605!2sNakkhu!5e0!3m2!1sen!2snp!4v1778301930398!5m2!1sen!2snp"
-                    height="300" 
-                    style="border:0; width:100%; border-radius: 1rem;" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+                    <!--iframe element is use to copy other website content and paste that content similar in our website-->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14134.912716724173!2d85.29603270306784!3d27.66388042090047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18292ce7d869%3A0x9c27140bd9c31605!2sNakkhu!5e0!3m2!1sen!2snp!4v1778301930398!5m2!1sen!2snp"
+                        height="300" style="border:0; width:100%; border-radius: 1rem;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
 
                 </div>
-              
+
             </div>
         </section>
-
-
     </main>
-
 
     <footer class="bg-primary text-white text-center px-1 py-1">
         &copy; 2026. All rights reserved.
     </footer>
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            const button = document.getElementById('themeButton');
+            if (document.documentElement.classList.contains('dark')) {
+                button.textContent = '☀️';
+            } else {
+                button.textContent = '🌙';
+            }
 
+        }
+    </script>
 
 </body>
 
