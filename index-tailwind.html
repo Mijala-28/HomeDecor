@@ -57,7 +57,7 @@
                         <span class="bg-primary text-white px-2 py-0.5 rounded-xl text-xs">5</span>
                     </button>
 
-                    <div class="bg-background shadow rounded-xl mt-2 p-4 " id="cart" popover="auto" class="cart-items">
+                    <div class="bg-background dark:bg-gray-700 dark:text-white shadow rounded-xl mt-2 p-4 " id="cart" popover="auto" class="cart-items">
                         <ul>
                             <li>Round Mirror</li>
                             <li>Rug</li>
@@ -136,13 +136,13 @@
                         Get 10% Off....</button>
                     <dialog id="signupForm">
                         <!--The <dialog> element makes it easy to create popup dialogs and modals on a web page.-->
-                        <div class="bg-background max-h-full w-lg flex flex-col justify-center fixed items-center top-1/2 left-1/2 
+                        <div class="bg-background dark:bg-gray-800 dark:text-white max-h-full w-lg flex flex-col justify-center fixed items-center top-1/2 left-1/2 
                             -translate-x-1/2 -translate-y-1/2 py-8 px-12 rounded-3xl m-4">
-                            <button class="absolute top-0 right-3" onclick="signupForm.close()">x</button>
+                            <button class="absolute top-0 right-3 dark:text-white" onclick="signupForm.close()">x</button>
                             <h2>Subscribe Us</h2>
                             <form action="#" class="mt-4">
                                 <input type="email" name="Email" required placeholder="email address"
-                                    class="w-full border-2 border-blue bg-white rounded-3xl py-2 px-4">
+                                    class="w-full border-2 border-blue bg-white dark:bg-gray-700 dark:test-white rounded-3xl py-2 px-4 focus:outline-none focus:border-primary">
                                 <button
                                     class="w-full bg-primary text-white mt-4 py-2 px-4 rounded-3xl">Subscribe</button>
                             </form>
@@ -320,5 +320,4 @@
     </script>
 
 </body>
-
 </html>
